@@ -1,5 +1,7 @@
 # vkBeautify
 
+> SnapLogic fork December 11th 2020 to incorporate open pull request https://github.com/vkiryukhin/vkBeautify/pull/5
+
 javascript  plugin to **pretty-print** or **minify**
 text in **XML**, **JSON**, **CSS** and **SQL** formats.
 
