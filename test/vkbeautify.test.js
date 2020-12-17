@@ -13,14 +13,25 @@ describe('vkbeautify', function () {
     describe('xml', function () {
 
         it("ui-778", function () {
-
-            var input = readFile("ui-778-input.xml");
+            var input = readFile("input.ui-778.xml");
             console.log(input);
 
             var output = vkbeautify.xml(input);
             console.log(output);
 
-            var expected = readFile("ui-778-expected.xml");
+            var expected = readFile("expected.ui-778.xml");
+
+            expect(output).toBe(expected);
+        });
+
+        it("ui-5546", function () {
+            var input = readFile("input.ui-5546.xml");
+            console.log(input);
+
+            var output = vkbeautify.xml(input);
+            console.log(output);
+
+            var expected = readFile("expected.ui-5546.xml");
 
             expect(output).toBe(expected);
         });

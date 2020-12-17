@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:A xmlns:ns2="http://ns2" xmlns="http://default-ns1">
+  <B>
+    <ns3:C xmlns:ns3="http://ns3" xmlns="http://default-ns2">DATA</ns3:C>
+    <D>DATA</D>
+    <E><![CDATA[<a>CDATA</a><b xmls="http://ns">CDATA</b>]]></E>
+    <ns2:F>DATA</ns2:F>
+    <G xmlns="http://default-ns3">DATA</G>
+  </B>
+</ns2:A>

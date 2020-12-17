@@ -128,7 +128,14 @@ vkbeautify.prototype.xml = function(text,step) {
 			} else 
 			// </elm> //
 			if(ar[ix].search(/<\//) > -1) { 
-				str = !inComment && !withNamespace? str += shift[--deep] + ar[ix] : str += ar[ix];
+				if(inComment) {
+					str += ar[ix];
+				} else if(withNamespace) {
+					// don't insert a CR before closing tag, but do decrement nesting
+					str += ar[ix]; --deep;
+				} else {
+					str += shift[--deep] + ar[ix];
+				}
 			} else 
 			// <elm/> //
 			if(ar[ix].search(/\/>/) > -1 ) { 
