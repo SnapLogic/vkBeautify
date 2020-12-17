@@ -1,0 +1,12 @@
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:ns0="http://tangierweb.com/">
+    <SOAP-ENV:Header />
+    <SOAP-ENV:Body>
+        <ns0:MaintainLocations>
+            <ns0:strRequest>
+                <![CDATA[<tangier version="1.0" method="location.request"><admin_user>soundWSTest</admin_user><admin_pwd>8ch!p0tL3</admin_pwd><locations><location action="info"><site_id>$site_id</site_id></location></locations></tangier>]]>
+            </ns0:strRequest>
+        </ns0:MaintainLocations>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

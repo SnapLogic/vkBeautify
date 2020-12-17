@@ -128,14 +128,13 @@ vkbeautify.prototype.xml = function(text,step) {
 			} else 
 			// </elm> //
 			if(ar[ix].search(/<\//) > -1) { 
-				--deep;
-				str = !inComment && !withNamespace? str += shift[deep] + ar[ix] : str += ar[ix];
+				str = !inComment && !withNamespace? str += shift[--deep] + ar[ix] : str += ar[ix];
 			} else 
 			// <elm/> //
 			if(ar[ix].search(/\/>/) > -1 ) { 
 				str = !inComment ? str += shift[deep]+ar[ix] : str += ar[ix];
 				if (ar[ix].search(/xmlns\:/) > -1  || ar[ix].search(/xmlns\=/) > -1)
-			        deep--;
+					deep--;
 			} else 
 			// <? xml ... ?> //
 			if(ar[ix].search(/<\?/) > -1) { 
